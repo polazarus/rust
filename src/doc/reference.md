@@ -12,7 +12,7 @@ provides three kinds of material:
     influenced the design.
 
 This document does not serve as an introduction to the language. Background
-familiarity with the language is assumed. A separate [book] is available to
+familiarity with the language is assumed. A setparate [book] is available to
 help acquire such background familiarity.
 
 This document also does not serve as a reference to the [standard] library
@@ -176,7 +176,7 @@ with any other legal whitespace element, such as a single space character.
 
 ```{.ebnf .gram}
 simple_token : keyword | unop | binop ;
-token : simple_token | ident | literal | symbol | whitespace token ;
+token : simple_token | ident | literal | symbol | lifetime | whitespace ;
 ```
 
 Tokens are primitive productions in the grammar defined by regular
@@ -549,6 +549,12 @@ completeness as the set of remaining miscellaneous printable tokens that do not
 otherwise appear as [unary operators](#unary-operator-expressions), [binary
 operators](#binary-operator-expressions), or [keywords](#keywords).
 
+### Lifetimes
+
+```{.ebnf .gram}
+lifetime : '\x27' ident ;
+```
+A lifetime token is an identifier prefixed with a single quote.
 
 ## Paths
 

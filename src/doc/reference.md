@@ -549,12 +549,12 @@ completeness as the set of remaining miscellaneous printable tokens that do not
 otherwise appear as [unary operators](#unary-operator-expressions), [binary
 operators](#binary-operator-expressions), or [keywords](#keywords).
 
-### Lifetimes
+### Lifetime identifiers
 
 ```{.ebnf .gram}
 lifetime : '\x27' ident ;
 ```
-A lifetime token is an identifier prefixed with a single quote.
+A lifetime identifier is an identifier prefixed with a single quote.
 
 ## Paths
 
